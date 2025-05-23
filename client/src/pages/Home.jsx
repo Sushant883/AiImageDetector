@@ -5,7 +5,7 @@ const Home = () => {
   const container = useRef();
 
   useEffect(() => {
-    gsap.from(container.current, { opacity: 0, y: 30, duration: 1, ease: "power2.out" });
+    gsap.from(container.current, { opacity: 1, y: 20, duration: 1 });
   }, []);
 
   return (
@@ -13,37 +13,37 @@ const Home = () => {
       ref={container}
       style={{
         minHeight: "100vh",
-        backgroundColor: "#fefcf7",
-        color: "#27374d",
+        backgroundColor: "#fcfbf7", // light creamy
+        color: "#2a3d45", // dark teal-ish
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
+        fontFamily: "Arial, sans-serif",
         padding: 20,
         textAlign: "center",
       }}
     >
-      <h1 style={{ fontSize: 48, marginBottom: 10, letterSpacing: 4, fontWeight: "700" }}>
+      <h1 style={{ fontSize: 40, marginBottom: 12, fontWeight: "700" }}>
         AI Image Detector
       </h1>
-      <p style={{ fontSize: 18, maxWidth: 400, marginBottom: 30, color: "#4a6572" }}>
+      <p style={{ fontSize: 16, maxWidth: 360, marginBottom: 25, color: "#556b6e" }}>
         Fast, accurate image detection powered by AI.
       </p>
       <button
         style={{
-          backgroundColor: "#d9ead3",
+          backgroundColor: "#2a3d45", // dark teal
+          color: "#f9f6f0", // light creamy text
           border: "none",
-          borderRadius: 30,
-          padding: "12px 40px",
+          borderRadius: 25,
+          padding: "10px 30px",
           fontWeight: "600",
           fontSize: 16,
           cursor: "pointer",
-          boxShadow: "0 4px 8px rgba(39, 55, 77, 0.1)",
-          transition: "background-color 0.3s",
+          transition: "background-color 0.3s ease",
         }}
-        onMouseEnter={(e) => (e.target.style.backgroundColor = "#a6c48a")}
-        onMouseLeave={(e) => (e.target.style.backgroundColor = "#d9ead3")}
+        onMouseEnter={(e) => (e.target.style.backgroundColor = "#4a6a6f")}
+        onMouseLeave={(e) => (e.target.style.backgroundColor = "#2a3d45")}
         onClick={() => alert("Welcome to AI Image Detector!")}
       >
         Get Started

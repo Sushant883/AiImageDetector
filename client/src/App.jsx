@@ -1,6 +1,8 @@
-// import { useState } from 'react'
+
 import Home from './pages/Home'
 import './App.css'
+import ImageUpload from './components/ImageUpload'
+// import gsap from 'gsap'
 
 function App() {
 
@@ -8,7 +10,9 @@ function App() {
   return (
     <>
       hellow Sushant
+      
       <Home />
+      <ImageUpload />
     </>
   )
 }
