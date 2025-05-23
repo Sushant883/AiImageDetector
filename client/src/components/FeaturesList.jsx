@@ -1,14 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React from 'react';
 import { Shield, Zap, History, LineChart, Lock, Share2 } from 'lucide-react';
 
-gsap.registerPlugin(ScrollTrigger);
-
 const FeaturesList = () => {
-  const featuresRef = useRef(null);
-  const titleRef = useRef(null);
-
   const features = [
     {
       icon: <Shield className="h-10 w-10 text-indigo-600 dark:text-indigo-400" />,
@@ -48,43 +41,13 @@ const FeaturesList = () => {
     },
   ];
 
-  useEffect(() => {
-    gsap.from(titleRef.current, {
-      opacity: 0,
-      y: 20,
-      duration: 0.8,
-      scrollTrigger: {
-        trigger: titleRef.current,
-        start: 'top 80%',
-      },
-    });
-
-    if (featuresRef.current) {
-      const items = featuresRef.current.children;
-      gsap.from(items, {
-        opacity: 0,
-        y: 30,
-        stagger: 0.1,
-        duration: 0.6,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: featuresRef.current,
-          start: 'top 75%',
-        },
-      });
-    }
-  }, []);
-
   return (
     <section className="py-12">
-      <h2
-        ref={titleRef}
-        className="text-3xl font-bold text-slate-900 dark:text-white text-center mb-12"
-      >
+      <h2 className="text-3xl font-bold text-slate-900 dark:text-white text-center mb-12">
         Why Choose <span className="text-indigo-600 dark:text-indigo-400">TruthLens</span>
       </h2>
 
-      <div ref={featuresRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {features.map((feature, i) => (
           <div
             key={i}

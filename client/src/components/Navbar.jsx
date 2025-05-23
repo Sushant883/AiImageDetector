@@ -7,19 +7,19 @@ import { useTheme } from '../contexts/ThemeContext';
 const Navbar = () => {
   const { isDarkMode, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const navRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef(null); // ✅ Fixed this line
 
   useEffect(() => {
     gsap.from(navRef.current, {
       y: -50,
       opacity: 0,
       duration: 0.8,
-      ease: 'power3.out'
+      ease: 'power3.out',
     });
   }, []);
 
   return (
-    <nav 
+    <nav
       ref={navRef}
       className="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-700 transition-colors duration-300"
     >
@@ -33,17 +33,17 @@ const Navbar = () => {
               </span>
             </Link>
           </div>
-          
+
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
             >
               Detector
             </Link>
-            <Link 
-              to="/history" 
+            <Link
+              to="/history"
               className="px-3 py-2 rounded-md text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
             >
               <div className="flex items-center">
@@ -72,7 +72,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none"
-              aria-expanded="false"
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>

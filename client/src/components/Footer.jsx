@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
           <div className="mt-8 md:mt-0 md:order-1">
             <p className="text-center text-sm text-slate-500 dark:text-slate-400 flex items-center justify-center">
-              Built with <Heart className="h-4 w-4 mx-1 text-red-500" /> by TruthLens Team &copy; {new Date().getFullYear()}
+              Built with <Heart className="h-4 w-4 mx-1 text-red-500" /> by TruthLens Team &copy; 2025
             </p>
           </div>
         </div>

@@ -3,11 +3,11 @@ import { gsap } from 'gsap';
 import { Scan, ShieldCheck, Zap } from 'lucide-react';
 
 const HeroSection = () => {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const subtitleRef = useRef<HTMLParagraphElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
-  const imageContainerRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef(null);
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const buttonRef = useRef(null);
+  const imageContainerRef = useRef(null);
 
   useEffect(() => {
     const timeline = gsap.timeline();
@@ -52,7 +52,6 @@ const HeroSection = () => {
       '-=0.6'
     );
 
-    // Add a subtle floating animation to the image
     gsap.to(imageContainerRef.current, {
       y: 15,
       duration: 2.5,
