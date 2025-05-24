@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function Home() {
   const [preview, setPreview] = useState(null);
 
-  function handleImageChange(e) {
+  function handleChange(e) {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
@@ -39,13 +39,27 @@ function Home() {
             fontSize:"25px"
          }}
       /> */}
-      <button
-      style={{
-        htmlFor:"Fileupload"
-      }}
-      >
-        Select File
-      </button>
+    
+    <input
+  type="file"
+  accept="image/*"
+  onChange={handleChange}
+  style={{
+    padding: '10px',
+    border: '2px solid #4CAF50',
+    borderRadius: '6px',
+    backgroundColor: '#f9f9f9',
+    fontSize: '16px',
+    color: '#333',
+    cursor: 'pointer',
+    outline: 'none',
+    boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+    marginTop: '20px',
+  }}
+/>
+
+
+    <label htmlFor=""></label>
 
       {preview && (
         <div

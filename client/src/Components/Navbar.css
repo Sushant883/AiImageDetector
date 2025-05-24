@@ -1,0 +1,119 @@
+/* fixed navbar + high z-index */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  
+  /* scroll-progress bar at top */
+  .progress-container {
+    height: 4px;
+    background: #f0f0f0;
+  }
+  .progress-bar {
+    height: 4px;
+    background: #007bff;
+    transition: width 0.1s ease-out;
+  }
+  
+  /* layout */
+  .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Div1: logo */
+  .nav-left .logo {
+    height: 40px;
+  }
+  
+  /* Div2: center links */
+  .nav-center .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-center .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  /* dropdown */
+  .dropdown {
+    position: relative;
+  }
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    display: none;
+  }
+  .dropdown-menu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Div3: search + buttons */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .search-container {
+    position: relative;
+  }
+  .search-container input {
+    padding: 0.25rem 2rem 0.25rem 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .search-btn {
+    position: absolute;
+    right: 0.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .btn.login {
+    background: transparent;
+    color: #007bff;
+  }
+  .btn.signup {
+    background: #007bff;
+    color: white;
+  }
+  
+  /* ensure content isn’t hidden under navbar */
+  body {
+    padding-top: 76px; /* nav height (40px) + progress (4px) + padding */
+  }
+  
