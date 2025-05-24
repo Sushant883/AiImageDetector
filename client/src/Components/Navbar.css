@@ -16,7 +16,8 @@
     background: #007bff;
     transition: width 0.1s ease-out;
   }
-  .nav-content {
+  .nav-content{
+    border: 2px solid red;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -110,7 +111,7 @@
 
 
 /* this is responsive code for tablet  */
-  @media (max-width: 786px) {
+  @media (max-width: 790px) {
     .nav-center {
       display: none;
     }
@@ -118,6 +119,14 @@
       display: block;
     }
 
+    .nav-content{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    /* .nav-right{
+        justify-content: center;
+    } */
     .nav-center.open {
       display: block;
       position: absolute;
