@@ -9,9 +9,9 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => {
       const { scrollY, innerHeight, documentElement } = window;
-      const docHeight = documentElement.scrollHeight - innerHeight;
-      const pct = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
-      setScrollPct(pct);
+    //   const docHeight = documentElement.scrollHeight - innerHeight;
+    //   const pct = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+    //   setScrollPct(pct);
     };
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
