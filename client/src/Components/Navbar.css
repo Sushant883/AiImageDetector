@@ -1,15 +1,12 @@
-/* fixed navbar + high z-index */
+/* Navbar.css */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 1000;
   }
-  
-  /* scroll-progress bar at top */
   .progress-container {
     height: 4px;
     background: #f0f0f0;
@@ -19,21 +16,15 @@
     background: #007bff;
     transition: width 0.1s ease-out;
   }
-  
-  /* layout */
   .nav-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
   }
-  
-  /* Div1: logo */
   .nav-left .logo {
     height: 40px;
   }
-  
-  /* Div2: center links */
   .nav-center .nav-links {
     list-style: none;
     display: flex;
@@ -43,12 +34,11 @@
   }
   .nav-center .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: whitesmoke;
     font-weight: 500;
+    font-size: 20px;
     position: relative;
   }
-  
-  /* dropdown */
   .dropdown {
     position: relative;
   }
@@ -56,23 +46,15 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background: white;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     list-style: none;
     padding: 0.5rem 0;
     margin: 0;
     display: none;
   }
-  .dropdown-menu li a {
-    display: block;
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
-  }
   .dropdown:hover .dropdown-menu {
     display: block;
   }
-  
-  /* Div3: search + buttons */
   .nav-right {
     display: flex;
     align-items: center;
@@ -111,9 +93,58 @@
     background: #007bff;
     color: white;
   }
-  
-  /* ensure content isn’t hidden under navbar */
-  body {
-    padding-top: 76px; /* nav height (40px) + progress (4px) + padding */
+  /* Responsive below 786px */
+  .hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 24px;
+    margin-left: auto;
+  }
+
+
+
+
+
+
+/* this is responsive code for tablet  */
+  @media (max-width: 786px) {
+    .nav-center {
+      display: none;
+    }
+    .hamburger-btn {
+      display: block;
+    }
+    .nav-center.open {
+      display: block;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      border-radius: 15px;
+      width: 30%;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 16px 0;
+    }
+    .nav-center.open .nav-links {
+      flex-direction: column;
+      
+      align-items: flex-start;
+      gap: 0;
+      padding: 0;
+    }
+    .nav-center.open .nav-links li {
+        
+      width: 100%;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .nav-center.open .nav-links li a {
+      display: block;
+      width: 100%;
+      padding: 12px 24px;
+      color: #333;
+    }
   }
   

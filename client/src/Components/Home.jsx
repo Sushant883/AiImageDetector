@@ -22,9 +22,14 @@ function Home() {
         maxWidth: 400,
         margin: "50px auto",
         padding: 20,
-        border: "1px solid #ccc",
+        border: "1px solid #fff",
         borderRadius: 10,
         textAlign: "center",
+        backdropFilter: "blur(1px)",
+        WebkitBackdropFilter: "blur(1px)",
+        backgroundImage:
+          "linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(240, 240, 240, 0.15))",
+        boxShadow: "0 0 20px rgba(255, 255, 255, 0.1)",
       }}
     >
       <h2 style={{ marginBottom: 15 }}>Upload Image</h2>
@@ -39,27 +44,25 @@ function Home() {
             fontSize:"25px"
          }}
       /> */}
-    
-    <input
-  type="file"
-  accept="image/*"
-  onChange={handleChange}
-  style={{
-    padding: '10px',
-    border: '2px solid #4CAF50',
-    borderRadius: '6px',
-    backgroundColor: '#f9f9f9',
-    fontSize: '16px',
-    color: '#333',
-    cursor: 'pointer',
-    outline: 'none',
-    boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
-    marginTop: '20px',
-  }}
-/>
 
-
-    <label htmlFor=""></label>
+      <input
+        type="file"
+        accept="image/*"
+        onChange={handleChange}
+        style={{
+          padding: "10px",
+          border: "2px solid black",
+          borderRadius: "6px",
+          width:"80%",
+          backgroundColor: "#f9f9f9",
+          fontSize: "16px",
+          color: "#333",
+          cursor: "pointer",
+          outline: "none",
+          boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
+          marginTop: "20px",
+        }}
+      />
 
       {preview && (
         <div
