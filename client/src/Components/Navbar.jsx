@@ -174,19 +174,6 @@ export default function Navbar() {
               <a href="#contact">Contact</a>
             </li>
           </ul>
-
-
-          {/* Div 3: Search + Login/Signup */}
-        <div className="nav-right">
-          {/* <div className="search-container">
-            <input ref={inputRef} type="search" placeholder="Search..." />
-            <button onClick={focusSearch} className="search-btn">
-              🔍
-            </button>
-          </div> */}
-          <button className="btn login">Login</button>
-          <button className="btn signup">Sign Up</button>
-        </div>
         
         </div>
 
@@ -198,8 +185,8 @@ export default function Navbar() {
               🔍
             </button>
           </div>
-          {/* <button className="btn login">Login</button>
-          <button className="btn signup">Sign Up</button> */}
+          <button className="btn login">Login</button>
+          <button className="btn signup">Sign Up</button>
         </div>
 
         {/* Hamburger icon for small screens */}
