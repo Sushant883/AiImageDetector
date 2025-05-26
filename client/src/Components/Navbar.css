@@ -156,5 +156,11 @@
       padding: 12px 24px;
       color: #333;
     }
+
+    .nav-right {
+      display: none;
+      
+
+    };
   }
   
