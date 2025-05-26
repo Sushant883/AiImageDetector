@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import WordLoop from "./WordLoop";
 
 function Home() {
   const [preview, setPreview] = useState(null);
@@ -17,6 +18,7 @@ function Home() {
   }
 
   return (
+    <>
     <div
       style={{
         maxWidth: 400,
@@ -83,6 +85,8 @@ function Home() {
         </div>
       )}
     </div>
+    <WordLoop />
+    </>
   );
 }
 
