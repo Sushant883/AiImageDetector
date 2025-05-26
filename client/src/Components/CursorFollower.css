@@ -1,7 +1,7 @@
 .cursor-dot {
     width: 15px;
     height: 15px;
-    background-color: red;
+    background-color: rgba(66, 62, 62, 0.737);
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
